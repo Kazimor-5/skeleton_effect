@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+body {
+  background-color: rgb(182, 186, 195);
+}
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(18.25rem, 1fr));
+  justify-items: center;
+  align-items: center;
+  gap: 1.25rem;
+  max-width: 81.25rem;
+  padding: 6.25rem 0.925rem;
+  margin: 0 auto;
+}
+.card {
+  background-color: rgb(235, 221, 212);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  transition: all 0.5s ease-in;
+}
+.card:hover,
+.card:focus {
+  transform: scale(1.02);
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+    0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+.top-img {
+  display: block;
+  height: 12.5rem;
+  width: 100%;
+  background-color: #4c4c4c;
+  object-fit: cover;
+}
+.top-img.skeleton-anim {
+  animation: skeleton 0.8s ease-in-out infinite alternate;
+}
+@keyframes skeleton {
+  to {
+    opacity: 0.6;
+  }
+}
+.content {
+  padding: 0.9375rem;
+}
+.skeleton-title,
+.skeleton-text {
+  background-color: #4c4c4c;
+  animation: skeleton 0.8s ease-in-out infinite alternate;
+}
+.skeleton-title {
+  height: 1.25rem;
+  width: 60%;
+}
+.skeleton-text {
+  width: 70%;
+  margin-top: 0.625rem;
+  height: 0.625rem;
+}
+.skeleton-text:first-of-type {
+  width: 90%;
+}
+.card-title,
+.card-text {
+  color: rgb(27, 59, 70);
+}
+.card-title {
+  font-family: 'Libre Baskerville', serif;
+}
+.card-text {
+  font-family: 'Montserrat', sans-serif;
+}
